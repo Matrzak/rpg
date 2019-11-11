@@ -6,22 +6,21 @@ const User = require('../models/User');
 
 module.exports = function(passport) {
     passport.use(
-        new LocalStrategy({ usernameField: 'name' }, (nick, password, done) => {
-            // Match user
+        new LocalStrategy({ usernameField: 'nick' }, (nick, password, done) => {
+
             User.findOne({
                 nick: nick
             }).then(user => {
                 if (!user) {
-                    return done(null, false, { message: 'That nick is not registered' });
+                    return done(null, false, {message: 'Bledny login lub haslo'});
                 }
 
-                // Match password
                 bcrypt.compare(password, user.password, (err, isMatch) => {
                     if (err) throw err;
                     if (isMatch) {
                         return done(null, user);
                     } else {
-                        return done(null, false, { message: 'Password incorrect' });
+                        return done(null, false, {message: 'Bledny login lub haslo'});
                     }
                 });
             });

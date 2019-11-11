@@ -5,7 +5,6 @@ let db = mongoose.connection;
 
 let connectionString = () => {
     let x = `mongodb://${config.user == null ? "" : config.user+":"}${config.password == null ? "" : config.password+"@"}${config.host+":"+config.port+"/"+config.database}`;
-    console.log(x);
     return x;
 };
 
