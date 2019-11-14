@@ -16,8 +16,12 @@ const UserSchema = new mongoose.Schema({
     rank: {
         type: Number,
         required: true
+    },
+    characters: {
+        type: Array,
+        required: true
     }
-});
+}, {strict: false});
 
 const User = mongoose.model('User', UserSchema);
 

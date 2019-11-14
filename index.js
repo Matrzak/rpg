@@ -4,7 +4,7 @@ const expressLayouts = require('express-ejs-layouts');
 const passport = require('passport');
 const flash = require('connect-flash-plus');
 const session = require('express-session');
-
+const Character = require("./models/Character");
 const app = express();
 
 require('./auth/passport')(passport);
@@ -20,12 +20,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 
 
-app.use(
-    session({
-        secret: 'secret',
-        resave: true,
-        saveUninitialized: true
-    })
+app.use(session({secret: 'secret',resave: true,saveUninitialized: true})
 );
 app.use(flash());
 

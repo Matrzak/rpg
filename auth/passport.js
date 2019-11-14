@@ -1,20 +1,18 @@
 const LocalStrategy = require('passport-local').Strategy;
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-
+const Character = require("../models/Character");
 const User = require('../models/User');
 
 module.exports = function(passport) {
     passport.use(
         new LocalStrategy({ usernameField: 'nick' }, (nick, password, done) => {
-
             User.findOne({
                 nick: nick
             }).then(user => {
                 if (!user) {
                     return done(null, false, {message: 'Bledny login lub haslo'});
                 }
-
                 bcrypt.compare(password, user.password, (err, isMatch) => {
                     if (err) throw err;
                     if (isMatch) {

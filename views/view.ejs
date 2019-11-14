@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>mRpgTools Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/public/panel/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="/public/panel/css/styles.css" rel="stylesheet">
+    <script src="/public/login/js/notiflix-1.9.1.min.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <h1><a href="dashboard.ejs">mRpgTools</a></h1>
+        </div>
+    </div>
+</div>
+
+<div class="page-content">
+
+    <h1 class="text-center"><%- character.name %></h1>
+    <span style="color: <%- character.alive ? "#28a745;" : "#dc3545;"%>"><h4 class="text-center"><%- character.alive ? "Ta postac zyje" : "Ta postac nie zyje"%></h4></span>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="content-box-large">
+                        <div class="panel-heading text-center panel-relative">
+                            <div class="panel-title">Statystyki</div>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Statystyki</th>
+                                    <th>Wartosci</th>
+                                </tr>
+                                </thead>
+                                <% let x = JSON.parse(character.stats);%>
+                                <% Object.keys(x).forEach((key) => { %>
+                                    <tbody>
+                                    <tr>
+                                        <td><%- key %></td>
+                                        <td><%- x[key] %></td>
+                                    </tr>
+                                    </tbody>
+                                <%})%>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="content-box-large">
+                        <div class="panel-heading">
+                            <div class="panel-title">Opis</div>
+                        </div>
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum mattis ac dolor non consequat.
+                            Integer in lacus enim. Nunc a ornare tortor.
+                            Integer tempus turpis ac felis malesuada, et tempor dolor egestas. Nullam in odio dui.
+                            Integer euismod lacus at consequat gravida. Nulla augue justo, facilisis id justo non, cursus accumsan elit.
+                            Nulla malesuada euismod metus sit amet cursus.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="content-box-large">
+                        <div class="panel-heading">
+                            <div class="panel-title">Informacje</div>
+                        </div>
+                        <div class="panel-body">
+                            Podejmowanie wiekszych deczyji na temat swojej postaci dzieje sie pod koniec
+                            gry (sesji).  Wtedy Game Master ma prawo udzielic ci punktow doswiadczenia
+                            lub zmodyfikowac aktualne statystyki na potrzeby dalszej rozgrywki.<br/><br/>
+                            <a href="/system/staff"> W razie problemu skontaktuj sie z administracja serwisu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="copy text-center">
+            mRpgTools made with <span style="color: red;"><i class="glyphicon glyphicon-heart"></i></span> by <a href='https://github.com/Matrzak'>Matrzak</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

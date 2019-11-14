@@ -4,9 +4,9 @@
     <title>mRpgTools Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="../public/panel/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/panel/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
-    <link href="../public/panel/css/styles.css" rel="stylesheet">
+    <link href="/public/panel/css/styles.css" rel="stylesheet">
 
   </head>
   <body>
@@ -29,7 +29,7 @@
                     <!-- Main menu -->
                     <li class="current"><a href="dashboard.ejs"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                     <li><a href="calendar.html"><i class="glyphicon glyphicon-wrench"></i> Narzedzia dla graczy</a></li>
-                    <li><a href="stats.html"><i class="glyphicon glyphicon-user"></i> Moje postacie</a></li>
+                    <li><a href="/system/characters"><i class="glyphicon glyphicon-user"></i> Moje postacie</a></li>
                     <li><a href="tables.html"><i class="glyphicon glyphicon-plus "></i> Stworz gre</a></li>
                     <li><a href="buttons.html"><i class="glyphicon glyphicon-play-circle"></i> Dolacz do gry</a></li>
 					<li><a href="forms.html"><i class="glyphicon glyphicon-flash"></i> Panel administratora</a></li>
@@ -47,7 +47,7 @@
 		  				<div class="panel-body">
 							Nick: <%- nick %><br/>
 							Ilosc Postaci: 0<br/>
-							Data rejestracji: 20-01-1995<br/>
+                            Data rejestracji: 20-01-1995<br/>
 		  				</div>
 		  			</div>
 		  		</div>
@@ -69,7 +69,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../public/panel/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../public/panel/js/custom.js"></script>
+    <script src="/public/panel/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/public/panel/js/custom.js"></script>
   </body>
 </html>
