@@ -1,87 +1,188 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 
 <head>
-    <title>mRpgTools Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="/public/panel/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- styles -->
-    <link href="/public/panel/css/styles.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Moje Postacie</title>
+    <link href="/public/main/css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="/public/main/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+
 </head>
 
-<body>
-<div class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="logo">
-                    <h1><a href="dashboard.ejs">mRpgTools</a></h1>
-                </div>
-            </div>
-        </div>
-    </div>
+<body id="page-top">
 
-    <div class="page-content">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="sidebar content-box" style="display: block;">
-                    <ul class="nav">
-                        <li><a href="/system"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
-                        <li><a href="calendar.html"><i class="glyphicon glyphicon-wrench"></i> Narzedzia dla graczy</a></li>
-                        <li class="current"><a href="#"><i class="glyphicon glyphicon-user"></i> Moje postacie</a></li>
-                        <li><a href="tables.html"><i class="glyphicon glyphicon-plus "></i> Stworz gre</a></li>
-                        <li><a href="buttons.html"><i class="glyphicon glyphicon-play-circle"></i> Dolacz do gry</a></li>
-                        <li><a href="forms.html"><i class="glyphicon glyphicon-flash"></i> Panel administratora</a></li>
-                        <li><a href="/logout"><i class="glyphicon glyphicon-log-out"></i> Wyloguj sie</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-10">
-                <h1>Twoje postacie</h1>
-                <span style="margin-left: 7px"><button type="button" class="btn btn-primary">Stworz Postac</button></span>
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/system">
+            <div class="sidebar-brand-text mx-3">mRpgTools</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" href="/system">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Strona Glowna</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            GRA
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-gamepad"></i>
+                <span>Dolacz Do Rozgrywki</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-glasses"></i>
+                <span>Obserwuj Rozgrywke</span></a>
+        </li>
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="far fa-plus-square"></i>
+                <span>Stworz Rozgrywke</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Dodatki
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/system/characters">
+                <i class="fas fa-mask"></i>
+                <span>Moje Postacie</span></a>
+        </li>
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="charts.html">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Dodatki Dla Graczy</span></a>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-meteor"></i>
+                <span>Zostan GameMasterem</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <br/>
+        <!-- Main Content -->
+        <div id="content">
+
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <h1 class="h3 mb-4 text-gray-800">Moje Postacie</h1>
+
+                <a href="#" class="btn btn-primary btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-flag"></i>
+                    </span>
+                    <span class="text">Dodaj nowa postac</span>
+                </a>
+                <hr/>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <br/>
-                            <% user.characters.forEach((chemp) => {%>
-                                <div class="col-md-6">
-                                    <div class="content-box-header">
-                                        <div class="panel-title">
-                                            <%- chemp.name %>
-                                        </div>
-                                    </div>
-                                    <div class="content-box-large box-with-header">
-                                        Uniwersum:<%- chemp.universe %><br/>
-                                        Data stworzenia: 01.02.2020 15:20:10<br/>
-                                        Aktualny stan: <%- chemp.alive ? "Zyje" : "Nie zyje" %><br/>
-                                        Unikalne ID: <%- chemp.id %><br/>
+                    <% user.characters.forEach((chemp) => {%>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card" style="width: 18rem; height: 20rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%- chemp.name %></h5>
+                                    <p class="card-text small text-dark">
+                                        Uniwersum:<br/><%- chemp.universe %><br/><br/>
+                                        Data stworzenia:<br/> 01.02.2020 15:20:10<br/><br/>
+                                        Aktualny stan:<br/> <%- chemp.alive ? "Zyje" : "Nie zyje" %><br/><br/>
+                                        Unikalne ID:<br/> <%- chemp.id %>
                                         <br/>
                                         <a href="<%- "characters/info/"+chemp.id%>" class="card-link">Pelne statystyki</a>
-                                    </div>
+                                    </p>
                                 </div>
-                            <% });%>
+                            </div>
                         </div>
-                    </div>
+                    <% });%>
                 </div>
+
             </div>
+            <!-- /.container-fluid -->
+
         </div>
+        <!-- End of Main Content -->
 
-        <footer>
-            <div class="container">
-
-                <div class="copy text-center">
-                    mRpgTools made with <span style="color: red;"><i class="glyphicon glyphicon-heart"></i></span> by <a href='https://github.com/Matrzak'>Matrzak</a>
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>mRpgTools made with <span style="color: red;"><i class="fas fa-heart"></i></span> by <a href='https://github.com/Matrzak'>Matrzak</a></span>
                 </div>
-
             </div>
         </footer>
+        <!-- End of Footer -->
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/public/panel/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/public/panel/js/custom.js"></script>
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- Bootstrap core JavaScript-->
+<script src="/public/main/vendor/jquery/jquery.min.js"></script>
+<script src="/public/main/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/public/main/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/public/main/js/sb-admin-2.min.js"></script>
+
 </body>
 
 </html>

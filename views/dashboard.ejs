@@ -1,75 +1,269 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>mRpgTools Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="/public/panel/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- styles -->
-    <link href="/public/panel/css/styles.css" rel="stylesheet">
+<html lang="pl">
 
-  </head>
-  <body>
-  	<div class="header">
-	     <div class="container">
-	        <div class="row">
-	           <div class="col-md-5">
-	              <div class="logo">
-	                 <h1><a href="dashboard.ejs">mRpgTools</a></h1>
-	              </div>
-	           </div>
-	     </div>
-	</div>
+<head>
 
-    <div class="page-content">
-    	<div class="row">
-		  <div class="col-md-2">
-		  	<div class="sidebar content-box" style="display: block;">
-                <ul class="nav">
-                    <!-- Main menu -->
-                    <li class="current"><a href="dashboard.ejs"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
-                    <li><a href="calendar.html"><i class="glyphicon glyphicon-wrench"></i> Narzedzia dla graczy</a></li>
-                    <li><a href="/system/characters"><i class="glyphicon glyphicon-user"></i> Moje postacie</a></li>
-                    <li><a href="tables.html"><i class="glyphicon glyphicon-plus "></i> Stworz gre</a></li>
-                    <li><a href="buttons.html"><i class="glyphicon glyphicon-play-circle"></i> Dolacz do gry</a></li>
-					<li><a href="forms.html"><i class="glyphicon glyphicon-flash"></i> Panel administratora</a></li>
-                    <li><a href="/logout"><i class="glyphicon glyphicon-log-out"></i> Wyloguj sie</a></li>
-                </ul>
-             </div>
-		  </div>
-		  <div class="col-md-10">
-		  	<div class="row">
-		  		<div class="col-md-6">
-		  			<div class="content-box-large">
-		  				<div class="panel-heading">
-							<div class="panel-title"><i class="glyphicon glyphicon-user"></i> Statystyki!</div>
-						</div>
-		  				<div class="panel-body">
-							Nick: <%- nick %><br/>
-							Ilosc Postaci: 0<br/>
-                            Data rejestracji: 20-01-1995<br/>
-		  				</div>
-		  			</div>
-		  		</div>
-		  	</div>
-		  </div>
-		</div>
-    </div>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <footer>
-         <div class="container">
-         
-            <div class="copy text-center">
-               mRpgTools made with <span style="color: red;"><i class="glyphicon glyphicon-heart"></i></span> by <a href='https://github.com/Matrzak'>Matrzak</a>
+    <title>mRpgTools - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="/public/main/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/public/main/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+            <div class="sidebar-brand-text mx-3">mRpgTools</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Strona Glowna</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            GRA
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-gamepad"></i>
+                <span>Dolacz Do Rozgrywki</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-glasses"></i>
+                <span>Obserwuj Rozgrywke</span></a>
+        </li>
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="far fa-plus-square"></i>
+                <span>Stworz Rozgrywke</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Dodatki
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="/system/characters">
+                <i class="fas fa-mask"></i>
+                <span>Moje Postacie</span></a>
+        </li>
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="charts.html">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Dodatki Dla Graczy</span></a>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-meteor"></i>
+                <span>Zostan GameMasterem</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <br/>
+        <!-- Main Content -->
+        <div id="content">
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Strona Glowna</h1>
+                    <a href="/logout" class="btn btn-danger btn-icon-split"><span class="icon text-white-50">
+                        <i class="fas fa-sign-out-alt"></i></span>
+                        <span class="text">Wyloguj sie</span>
+                    </a>
+                </div>
+
+                <!-- Content Row -->
+                <div class="row">
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Witaj</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><%- user.nick %></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-user fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-<%-rankA[1]%> shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-<%-rankA[1]%> text-uppercase mb-1">Twoja Ranga</div>
+                                        <div class="h5 mb-0 font-weight-bold text-<%-rankA[1]%>"><%-rankA[0]%></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Data Rejestracji</div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-auto">
+                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">01.02.2020</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pending Requests Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Wersja Aplikacji</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">0.1 ALPHA</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="far fa-calendar-alt fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Row -->
+
+                <div class="row">
+                    <div class="col-md-12">              <!-- Project Card Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Aktualny stan pracy</h6>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="small font-weight-bold">Wprowadzenie platformy na VPS <span class="float-right">Gotowe!</span></h4>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <br/>
+                                <h4 class="small font-weight-bold">Review Postaci <span class="float-right">90%</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h4 class="small font-weight-bold">Tworzenie Postaci <span class="float-right">60%</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h4 class="small font-weight-bold">Konfiguracja profilu<span class="float-right">10%</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-            
-         </div>
-      </footer>
+            <!-- End of Main Content -->
+        </div>
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>mRpgTools made with <span style="color: red;"><i class="fas fa-heart"></i></span> by <a href='https://github.com/Matrzak'>Matrzak</a></span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/public/panel/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/public/panel/js/custom.js"></script>
-  </body>
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+<!-- Bootstrap core JavaScript-->
+<script src="/public/main/vendor/jquery/jquery.min.js"></script>
+<script src="/public/main/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/public/main/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/public/main/js/sb-admin-2.min.js"></script>
+
+</body>
+
 </html>

@@ -17,6 +17,10 @@ body {
     border: solid 0.1px #00b462;
 }
 
+.actions{
+    margin-left: 50px;
+}
+
 /* Footer */
 
 footer{

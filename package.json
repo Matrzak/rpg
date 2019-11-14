@@ -9,6 +9,7 @@
   "author": "Matrzak",
   "license": "ISC",
   "dependencies": {
+    "@sweetalert2/theme-borderless": "^3.0.3",
     "bcryptjs": "^2.4.3",
     "connect-flash-plus": "^0.2.1",
     "cookie-parser": "^1.4.4",
