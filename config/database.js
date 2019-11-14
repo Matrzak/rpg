@@ -1,9 +1,9 @@
 var config = {
-    host: 'localhost',
+    host: '54.37.155.192',
     database: 'rpgtools',
     port: 27017,
-    user: null,
-    password: null
+    user: "MatrzakAdmin",
+    password: "qwerty4321"
 };
 
 module.exports = config;
