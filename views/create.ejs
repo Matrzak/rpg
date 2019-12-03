@@ -1,94 +1,174 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 
 <head>
-    <title>mRpgTools Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="/public/panel/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- styles -->
-    <link href="/public/panel/css/styles.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Moje Postacie</title>
+    <link href="/public/main/css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="/public/main/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+
 </head>
 
-<body>
-<div class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="logo">
-                    <h1><a href="dashboard.ejs">mRpgTools</a></h1>
-                </div>
-            </div>
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/system">
+            <div class="sidebar-brand-text mx-3">mRpgTools</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" href="/system">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Strona Glowna</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            GRA
         </div>
-    </div>
 
-    <div class="page-content">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="sidebar content-box" style="display: block;">
-                    <ul class="nav">
-                        <li><a href="/system"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
-                        <li><a href="calendar.html"><i class="glyphicon glyphicon-wrench"></i> Narzedzia dla graczy</a></li>
-                        <li class="current"><a href="#"><i class="glyphicon glyphicon-user"></i> Moje postacie</a></li>
-                        <li><a href="tables.html"><i class="glyphicon glyphicon-plus "></i> Stworz gre</a></li>
-                        <li><a href="buttons.html"><i class="glyphicon glyphicon-play-circle"></i> Dolacz do gry</a></li>
-                        <li><a href="forms.html"><i class="glyphicon glyphicon-flash"></i> Panel administratora</a></li>
-                        <li><a href="/logout"><i class="glyphicon glyphicon-log-out"></i> Wyloguj sie</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-10">
-                <div class="row">
-                    <h1 class="text-center">Tworzenie postaci</h1>
-                </div>
-                <br/>
-                <div class="row">
-                    <div class="form-group">
-                        <label class="control-label col-md-1">Wybierz Uniwersum</label>
-                        <div class="col-md-12">
-                            <select id="universe" class="form-control">
-                                <option disabled selected value> -- KLIKNIJ -- </option>
-                                <option>Warhammer Fantasy</option>
-                                <option>Warhammer 40K</option>
-                                <option>Call of Cthulu</option>
-                                <option>WW2</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group">
-                        <label class="control-label col-md-1">Godnosc Postaci</label>
-                        <div class="col-md-2">
-                            <input class="form-control" placeholder="Godnosc Postaci" type="text">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-gamepad"></i>
+                <span>Dolacz Do Rozgrywki</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-glasses"></i>
+                <span>Obserwuj Rozgrywke</span></a>
+        </li>
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="far fa-plus-square"></i>
+                <span>Stworz Rozgrywke</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Dodatki
         </div>
-    </div>
 
-        <footer>
-            <div class="container">
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/system/characters">
+                <i class="fas fa-mask"></i>
+                <span>Moje Postacie</span></a>
+        </li>
 
-                <div class="copy text-center">
-                    mRpgTools made with <span style="color: red;"><i class="glyphicon glyphicon-heart"></i></span> by <a href='https://github.com/Matrzak'>Matrzak</a>
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="charts.html">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Dodatki Dla Graczy</span></a>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-meteor"></i>
+                <span>Zostan GameMasterem</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <br/>
+        <!-- Main Content -->
+        <div id="content">
+
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <h1 class="h3 mb-4 text-gray-800">Tworzenie nowej postaci</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Wybierz uniwersum</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option selected disabled hidden>?</option>
+                            <option>Warhammer Fantasy Roleplay</option>
+                        </select>
+                    </div>
+                </form>
+
+                <hr/>
+
+                <div id="changeable"></div>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>mRpgTools made with <span style="color: red;"><i class="fas fa-heart"></i></span> by <a href='https://github.com/Matrzak'>Matrzak</a></span>
                 </div>
-
             </div>
         </footer>
-</div>
+        <!-- End of Footer -->
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/public/panel/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/public/panel/js/custom.js"></script>
-        <script>
-            $(document).on('change', $("#universe"), (el) => {
-                console.log($(el.target).val());
-            });
-        </script>
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- Bootstrap core JavaScript-->
+<script src="/public/main/vendor/jquery/jquery.min.js"></script>
+<script src="/public/main/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/public/main/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/public/main/js/sb-admin-2.min.js"></script>
+<script src="/public/main/js/creator.js"></script>
 </body>
 
 </html>

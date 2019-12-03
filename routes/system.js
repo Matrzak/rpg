@@ -31,24 +31,19 @@ router.get('/', ensureAuthenticated, (req, res) => {
 });
 router.get('/characters', ensureAuthenticated, (req,res) => {
     let characters = [];
-    Character.find({owner: req.user.nick}, (err, character) => {
+    Character.find({owner: req.user.nick}).then((character) => {
         character.forEach((element) => {characters.push(element);});
-    }).then(() => {
-        req.user.characters = characters;
-        res.render('characters', {user: req.user});
+        res.render('characters', {characters: characters});
     });
 });
 
 router.get('/characters/info/*', ensureAuthenticated, (req,res) => {
     let p = req.params[0];
     if(!ObjectId.isValid(p)) return res.redirect('/system');
-    let c = undefined;
-    Character.findById(p, (err, found) => {
-       if(found) c = found;
-    }).then(() => {
-        if(c === undefined) return res.redirect('/system');
-        if(c.owner !== req.user.nick) return res.redirect('/system');
-        res.render('view', {character: c});
+    Character.findById(p).then((found) => {
+        if(found === undefined) return res.redirect('/system');
+        if(found.owner !== req.user.nick) return res.redirect('/system');
+        res.render('view', {character: found});
     });
 });
 
@@ -56,13 +51,10 @@ router.get('/characters/create', ensureAuthenticated, (req,res) => {
     res.render('create');
 });
 
-router.post('/characters/delete', ensureAuthenticated, (req,res) => {
-    const {value} = req.body;
-   console.log(value);
+router.post('/characters/create', (req,res) => {
+    var dog = req.body;
+    console.log(dog);
+    res.send("Dog added!");
 });
-
-router.get('/newSystem', (req,res) => {
-    res.render('newPage');
-})
 
 module.exports = router;

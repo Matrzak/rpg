@@ -126,12 +126,19 @@
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800 text-center"><%- character.name %></h1>
                 <span style="color: <%- character.alive ? "#28a745;" : "#dc3545;"%>"><h4 class="text-center small"><%- character.alive ? "Ta postac zyje" : "Ta postac nie zyje"%></h4></span>
+                <h3>Opis:</h3>
+                <p class="text-justify"><%- character.description %></p>
                 <br/>
                 <div class="row">
                     <table id="example" class="table table-striped table-bordered" style="width:30%">
                         <thead>
                         <tr>
                             <th>Statystyka</th>
+                        </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <th>Cecha</th>
                             <th>Wartosc</th>
                         </tr>
                         </thead>
@@ -146,35 +153,65 @@
                         </tbody>
                         <%})%>
                     </table>
-                    <div class="col-xl-6">
-                        <div class="content-box-large">
-                            <div class="panel-heading">
-                                <div class="panel-title">Opis</div>
-                            </div>
-                            <div class="panel-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Vestibulum mattis ac dolor non consequat.
-                                Integer in lacus enim. Nunc a ornare tortor.
-                                Integer tempus turpis ac felis malesuada, et tempor dolor egestas. Nullam in odio dui.
-                                Integer euismod lacus at consequat gravida. Nulla augue justo, facilisis id justo non, cursus accumsan elit.
-                                Nulla malesuada euismod metus sit amet cursus.
-                            </div>
-                        </div>
-                    </div>
+                    <table id="example" class="table table-striped table-bordered" style="margin-left: 50px; width:30%">
+                        <thead>
+                        <tr>
+                            <th>Wyposażenie</th>
+                        </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <th>Calosc</th>
+                            <th>Głowa</th>
+                            <th>Korpus</th>
+                            <th>Ramiona</th>
+                            <th>Nogi</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tbody>
+                        <tr>
+                            <td>Plytowa Zbroja</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
+
                 <div class="row">
-                    <div class="col-xl-6">
-                        <div class="content-box-large fajne">
-                            <div class="panel-heading">
-                                <div class="panel-title">Informacje</div>
-                            </div>
-                            <div class="panel-body">
-                                Podejmowanie wiekszych deczyji na temat swojej postaci dzieje sie pod koniec
-                                gry (sesji).  Wtedy Game Master ma prawo udzielic ci punktow doswiadczenia
-                                lub zmodyfikowac aktualne statystyki na potrzeby dalszej rozgrywki.<br/><br/>
-                                <a href="/system/staff"> W razie problemu skontaktuj sie z administracja serwisu</a>
-                            </div>
-                        </div>
+                    <table id="example" class="table table-striped table-bordered col-md-12" style="width:30%">
+                        <thead>
+                        <tr>
+                            <th>Ekwipunek</th>
+                        </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <th>Przedmiot</th>
+                            <th>Jakosc</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tbody>
+                        <tr>
+                            <td>Ognisty Miecz "Piuro Feniksa"</td>
+                            <td>Artefakt</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row">
+                    <div class="">
+                        <hr/>
+                        <br/><br/>
+                        Podejmowanie wiekszych deczyji na temat swojej postaci dzieje sie pod koniec
+                        gry (sesji).  Wtedy Game Master ma prawo udzielic ci punktow doswiadczenia
+                        lub zmodyfikowac aktualne statystyki na potrzeby dalszej rozgrywki.<br/><br/>
+                        <a href="/system/staff"> W razie problemu skontaktuj sie z administracja serwisu</a>
                     </div>
                 </div>
 

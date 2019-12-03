@@ -4394,6 +4394,10 @@ input[type="button"].btn-block {
 .fajne{
     background: red;
 }
+
+.right{
+  text-align: right;
+}
 .champ-select{
   width: 100%;
   background-color: red;
