@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const GCharacter = require('./basic/GCharacter');
-
+const cManager = require('./managers/characterCreator');
 require('./auth/passport')(passport);
 
 //DB
@@ -40,7 +40,5 @@ app.use('/system', require('./routes/system.js'));
 
 const port = process.env.port || 3000;
 app.listen(port, () => {
-    let x = new GCharacter({race: 2});
-    x.newRandomCharacter();
     console.log(`Rzucam 1k${port}!`);
 });

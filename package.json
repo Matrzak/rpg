@@ -2,7 +2,7 @@
   "name": "rpg",
   "version": "0.0.1",
   "description": "Rpg tool made by Matrzak",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

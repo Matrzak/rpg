@@ -2,8 +2,12 @@
 
 const Patterns = require('../basic/Pattern');
 
-function getRandomClass(){
-    return Patterns.wfrp_c[Math.floor(Math.random()*Patterns.wfrp_c.length)];
+function getRandomClass(race){
+    let aPatterns = [];
+    Patterns.wfrp_c.forEach((element) => {
+       if(element.pass.includes(race)) aPatterns.push(element);
+    });
+    return aPatterns[Math.floor(Math.random()*aPatterns.length)];
 }
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);

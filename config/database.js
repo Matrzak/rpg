@@ -1,5 +1,5 @@
 var config = {
-    host: 'rpg.matrzak.pl',
+    host: '35.188.70.185',
     database: 'rpgtools',
     port: 27017,
     user: "MatrzakAdmin",

@@ -7,15 +7,19 @@ class GCharacter{
         this.name = params.name;
         this.stats = params.stats;
         this.profession = undefined;
-        this.race = params.race;
-        this.sex = 0;
+        this.race = this.default(params.race,1);
+        this.sex = this.default(params.sex,0);
+    }
+
+    default(v,v1){
+        if(v === undefined) return v1;
     }
 
     newRandomCharacter(){
         this.statisticByRace();
         this.rollStats();
         this.createSecondStatistics(Patterns.secondPattern);
-        this.upgradeStatistics(cManager.getRandomClass());
+        this.upgradeStatistics(cManager.getRandomClass(this.race));
     }
 
     convertRace() {
@@ -43,6 +47,7 @@ class GCharacter{
         }
         this.stats["S"] = Number((this.stats["K"]).toString()[0]);
         this.stats["WT"] = Number((this.stats["ODP"]).toString()[0]);
+        this.profession = c.name;
     }
 
     statisticByRace() {

@@ -16,8 +16,7 @@ db.on('error', () => {
     console.error.bind(console, 'connection error:');
 });
 db.once('open', function() {
-    console.log("Polaczyles sie kozaku!");
-
+    console.log("connected to database successfully!");
 });
 
 
